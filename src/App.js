@@ -6,6 +6,8 @@ import Contact from './component/assets/contact/Contact'
 import Welcome from './component/assets/welcome/Welcome'
 import Navigation from "./component/assets/navigation/Navigation";
 import Error from './component/assets/error/Error'
+import Jeopardy from "./component/jeopardy/Jeopardy";
+
 
 class App extends Component {
   
@@ -19,6 +21,7 @@ class App extends Component {
           path="/welcome/:name"
           render={(props) => <Welcome {...props} />}
         />
+        <Route exact path="/jeopardy" component={Jeopardy}/>
         <Route path="/clock" component={Clock} />
         <Route path="/contact" component={Contact} />
         <Route component={Error}></Route> 
